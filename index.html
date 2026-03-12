@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="it" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vendi la tua casa al miglior prezzo | Agenzia Immobiliare Premium</title>
+    <meta name="description" content="Vendi la tua casa al miglior prezzo di mercato in meno di 90 giorni. Richiedi subito una valutazione gratuita e senza impegno.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f8fafc',
+                            100: '#f1f5f9',
+                            800: '#1e293b',
+                            900: '#0f172a',
+                        },
+                        accent: {
+                            500: '#ef4444', // Rosso Focus Casa
+                            600: '#dc2626',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Styles for smooth FAQ accordion */
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        .faq-item.active .faq-answer {
+            max-height: 200px; /* Adjust based on content */
+        }
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body class="font-sans text-brand-800 bg-brand-50 antialiased selection:bg-accent-500 selection:text-white">
+
+    <!-- Header -->
+    <header class="fixed w-full top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100 shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-2 cursor-pointer">
+                <svg viewBox="0 0 240 70" xmlns="http://www.w3.org/2000/svg" class="h-10 w-auto">
+                    <!-- F -->
+                    <text x="0" y="45" font-family="Arial, sans-serif" font-weight="900" font-size="50" fill="#0f172a">F</text>
+                    <!-- Manico Lente -->
+                    <line x1="46" y1="42" x2="30" y2="62" stroke="#0f172a" stroke-width="8" stroke-linecap="round"/>
+                    <!-- Lente -->
+                    <circle cx="65" cy="28" r="18" stroke="#0f172a" stroke-width="6" fill="white"/>
+                    <!-- Casa Rossa -->
+                    <path d="M 53 28 L 65 17 L 77 28 L 77 39 L 53 39 Z" fill="#ef4444"/>
+                    <!-- Finestre -->
+                    <rect x="56" y="23" width="4" height="5" fill="white"/>
+                    <rect x="70" y="23" width="4" height="5" fill="white"/>
+                    <!-- Porta -->
+                    <rect x="63" y="31" width="4" height="8" fill="white"/>
+                    <!-- CUS -->
+                    <text x="88" y="45" font-family="Arial, sans-serif" font-weight="900" font-size="50" fill="#0f172a" letter-spacing="-1">CUS</text>
+                    <!-- CASA -->
+                    <text x="92" y="65" font-family="Arial, sans-serif" font-weight="900" font-size="22" fill="#ef4444" letter-spacing="2">CASA</text>
+                </svg>
+            </div>
+            <a href="#valuta-ora" class="hidden sm:flex inline-flex items-center justify-center px-6 py-2.5 border border-transparent text-sm font-semibold rounded-md text-white bg-brand-900 hover:bg-brand-800 transition-all duration-200 shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
+                Valuta Ora la tua Casa
+            </a>
+            <!-- Mobile Menu Button (simplified for landing page) -->
+            <a href="#valuta-ora" class="sm:hidden text-accent-500 font-semibold">Valuta Ora</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80" alt="Interno di casa accogliente" class="w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-gradient-to-r from-brand-900/95 via-brand-900/80 to-transparent"></div>
+        </div>
+        
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-2xl">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent-500/20 border border-accent-500/30 text-accent-500 text-sm font-medium mb-6">
+                    <i data-lucide="check-circle-2" class="w-4 h-4"></i>
+                    <span>Metodo Certificato e Sicuro</span>
+                </div>
+                <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
+                    Metti a <span class="text-accent-500">fuoco</span> il vero valore del tuo immobile e vendilo al <span class="text-accent-500 underline decoration-accent-500/50 underline-offset-8">miglior prezzo</span>.
+                </h1>
+                <p class="text-lg sm:text-xl text-gray-300 mb-10 leading-relaxed font-light">
+                    Senza stress, senza infinite visite a vuoto e con la sicurezza di un team di esperti al tuo fianco. Scopri il reale valore del tuo immobile.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#valuta-ora" class="inline-flex items-center justify-center px-8 py-4 text-base font-bold rounded-md text-white bg-accent-500 hover:bg-accent-600 transition-all duration-300 shadow-lg shadow-accent-500/30 transform hover:-translate-y-1">
+                        Richiedi Valutazione Gratuita
+                        <i data-lucide="arrow-right" class="ml-2 w-5 h-5"></i>
+                    </a>
+                    <div class="flex items-center gap-4 text-white/80 text-sm mt-4 sm:mt-0 sm:ml-4">
+                        <div class="flex -space-x-2">
+                            <img class="w-10 h-10 rounded-full border-2 border-brand-900" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&auto=format&fit=facearea&facepad=2&w=100&h=100&q=80" alt="Cliente felice">
+                            <img class="w-10 h-10 rounded-full border-2 border-brand-900" src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&auto=format&fit=facearea&facepad=2&w=100&h=100&q=80" alt="Cliente felice">
+                            <img class="w-10 h-10 rounded-full border-2 border-brand-900" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=facearea&facepad=2&w=100&h=100&q=80" alt="Cliente felice">
+                        </div>
+                        <p>Scelti da oltre <strong>500+</strong> famiglie<br>nel 2023.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof / Trust Bar -->
+    <section class="bg-white py-10 border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <p class="text-center text-sm font-semibold text-gray-400 uppercase tracking-wider mb-6">Riconosciuti e associati con i migliori del settore</p>
+            <div class="flex flex-wrap justify-center items-center gap-10 md:gap-20 opacity-60 grayscale">
+                <!-- Placeholder for logos using text/icons for demo purposes -->
+                <div class="flex items-center gap-2 font-serif text-xl font-bold"><i data-lucide="award" class="w-6 h-6"></i> FIMAA</div>
+                <div class="flex items-center gap-2 font-serif text-xl font-bold"><i data-lucide="shield-check" class="w-6 h-6"></i> FIAIP</div>
+                <div class="flex items-center gap-2 font-serif text-xl font-bold text-blue-600"><i data-lucide="home" class="w-6 h-6"></i> Immobiliare.it</div>
+                <div class="flex items-center gap-2 font-serif text-xl font-bold"><i data-lucide="newspaper" class="w-6 h-6"></i> Il Gazzettino</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem & Solution Section -->
+    <section class="py-20 bg-brand-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="font-serif text-3xl md:text-4xl font-bold text-brand-900 mb-4">Vendere casa da soli oggi è un rischio che non puoi permetterti.</h2>
+                <p class="text-lg text-gray-600">Il mercato immobiliare è cambiato. Foto sfocate e un cartello sul balcone non bastano più per attirare acquirenti qualificati e ottenere il vero valore del tuo immobile.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <!-- The Problem -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-red-50 relative">
+                    <div class="absolute top-0 right-0 p-4 opacity-10">
+                        <i data-lucide="alert-triangle" class="w-24 h-24 text-red-500"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-red-600 mb-6 flex items-center gap-2">
+                        <i data-lucide="x-circle" class="w-5 h-5"></i>
+                        I rischi del "Fai da te"
+                    </h3>
+                    <ul class="space-y-4 text-gray-600">
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="minus" class="w-5 h-5 text-red-400 shrink-0 mt-0.5"></i>
+                            <span><strong>Svalutazione dell'immobile:</strong> Prezzi sbagliati bruciano la proprietà sul mercato nei primi 30 giorni.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="minus" class="w-5 h-5 text-red-400 shrink-0 mt-0.5"></i>
+                            <span><strong>Turisti immobiliari:</strong> Decine di appuntamenti con persone non qualificate finanziariamente (perdita di tempo e privacy).</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="minus" class="w-5 h-5 text-red-400 shrink-0 mt-0.5"></i>
+                            <span><strong>Rischi legali e burocratici:</strong> Documentazione incompleta che fa saltare il rogito all'ultimo minuto.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- The Solution -->
+                <div class="bg-brand-900 p-8 rounded-2xl shadow-xl shadow-brand-900/20 relative transform md:-translate-y-4 border-t-4 border-accent-500">
+                    <div class="absolute top-0 right-0 p-4 opacity-10">
+                        <i data-lucide="shield-check" class="w-24 h-24 text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-accent-500 mb-6 flex items-center gap-2">
+                        <i data-lucide="check-circle-2" class="w-5 h-5"></i>
+                        Il Metodo DomusPremium
+                    </h3>
+                    <ul class="space-y-4 text-gray-300">
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="check" class="w-5 h-5 text-accent-500 shrink-0 mt-0.5"></i>
+                            <span><strong class="text-white">Big Data & IA:</strong> Valutazione millimetrica basata su dati reali di compravenduto nella tua via, non su stime approssimative.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="check" class="w-5 h-5 text-accent-500 shrink-0 mt-0.5"></i>
+                            <span><strong class="text-white">Marketing Emozionale:</strong> Home staging virtuale, foto professionali e video drone per far innamorare l'acquirente.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="check" class="w-5 h-5 text-accent-500 shrink-0 mt-0.5"></i>
+                            <span><strong class="text-white">Database Esclusivo:</strong> Proponiamo la tua casa a oltre 5.000 acquirenti già pre-qualificati per il mutuo.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3 Step Process -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="font-serif text-3xl md:text-4xl font-bold text-brand-900 mb-4">Come vendiamo la tua casa in 3 semplici step</h2>
+                <p class="text-lg text-gray-600">Un processo collaudato per garantirti tranquillità e il massimo realizzo economico.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 relative">
+                <!-- Connection line for desktop -->
+                <div class="hidden md:block absolute top-12 left-1/6 right-1/6 h-0.5 bg-gray-200 z-0"></div>
+
+                <!-- Step 1 -->
+                <div class="relative z-10 text-center">
+                    <div class="w-24 h-24 mx-auto bg-brand-50 rounded-full flex items-center justify-center border-4 border-white shadow-lg mb-6 text-brand-900">
+                        <i data-lucide="calculator" class="w-10 h-10"></i>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+                        <span class="text-accent-500 font-bold text-sm tracking-wider uppercase mb-2 block">Step 1</span>
+                        <h3 class="font-serif text-xl font-bold text-brand-900 mb-3">Valutazione Professionale</h3>
+                        <p class="text-gray-600 text-sm">Analizziamo la tua proprietà e il mercato locale per definire la strategia di prezzo perfetta. Completamente gratuita.</p>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="relative z-10 text-center mt-8 md:mt-0">
+                    <div class="w-24 h-24 mx-auto bg-accent-500 rounded-full flex items-center justify-center border-4 border-white shadow-lg mb-6 text-white transform md:scale-110">
+                        <i data-lucide="megaphone" class="w-10 h-10"></i>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+                        <span class="text-accent-500 font-bold text-sm tracking-wider uppercase mb-2 block">Step 2</span>
+                        <h3 class="font-serif text-xl font-bold text-brand-900 mb-3">Piano di Marketing</h3>
+                        <p class="text-gray-600 text-sm">Prepariamo l'immobile e lanciamo campagne mirate per raggiungere il maggior numero di acquirenti in target.</p>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="relative z-10 text-center mt-8 md:mt-0">
+                    <div class="w-24 h-24 mx-auto bg-brand-50 rounded-full flex items-center justify-center border-4 border-white shadow-lg mb-6 text-brand-900">
+                        <i data-lucide="key" class="w-10 h-10"></i>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+                        <span class="text-accent-500 font-bold text-sm tracking-wider uppercase mb-2 block">Step 3</span>
+                        <h3 class="font-serif text-xl font-bold text-brand-900 mb-3">Vendita e Rogito</h3>
+                        <p class="text-gray-600 text-sm">Gestiamo noi le visite, negoziamo il miglior prezzo e ti affianchiamo in tutta la burocrazia fino alla firma dal notaio.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="#valuta-ora" class="inline-flex items-center justify-center px-8 py-4 text-base font-bold rounded-md text-brand-900 bg-white border-2 border-brand-900 hover:bg-brand-50 transition-all duration-300">
+                    Inizia il Primo Step Ora
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case History / Testimonials -->
+    <section class="py-20 bg-brand-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="font-serif text-3xl md:text-4xl font-bold mb-4">I numeri parlano per noi. E i nostri clienti pure.</h2>
+                <p class="text-lg text-gray-400">Guarda i risultati reali che abbiamo ottenuto per chi si è affidato a noi nel pordenonese.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Case Study 1 -->
+                <div class="bg-brand-800 rounded-2xl overflow-hidden shadow-2xl group">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Appartamento venduto a Pordenone" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute top-4 left-4 bg-accent-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">
+                            Venduto
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <div class="flex justify-between items-center mb-4 border-b border-brand-700 pb-4">
+                            <div>
+                                <p class="text-gray-400 text-sm">Tipologia</p>
+                                <p class="font-bold">Trilocale, Pordenone Centro</p>
+                            </div>
+                            <div class="text-right">
+                                <p class="text-gray-400 text-sm">Giorni sul mercato</p>
+                                <p class="font-bold text-accent-500 text-xl">28 Giorni</p>
+                            </div>
+                        </div>
+                        <div class="mb-6">
+                            <p class="text-gray-400 text-sm">Risultato</p>
+                            <p class="font-bold text-lg text-green-400">+5% sul prezzo richiesto iniziale</p>
+                        </div>
+                        <blockquote class="italic text-gray-300 text-sm border-l-4 border-accent-500 pl-4">
+                            "Avevo provato a vendere da solo per 4 mesi senza successo. Il team ha rifatto le foto valorizzando il nostro appartamento in centro storico, e in meno di un mese avevamo due offerte concrete. Eccezionali."
+                        </blockquote>
+                        <div class="mt-4 flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-full bg-brand-700 flex items-center justify-center text-sm font-bold">MR</div>
+                            <span class="text-sm font-medium">Marco Rossi</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Case Study 2 -->
+                <div class="bg-brand-800 rounded-2xl overflow-hidden shadow-2xl group">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Villetta venduta a Cordenons" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute top-4 left-4 bg-accent-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">
+                            Venduto
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <div class="flex justify-between items-center mb-4 border-b border-brand-700 pb-4">
+                            <div>
+                                <p class="text-gray-400 text-sm">Tipologia</p>
+                                <p class="font-bold">Villetta a schiera, Cordenons</p>
+                            </div>
+                            <div class="text-right">
+                                <p class="text-gray-400 text-sm">Giorni sul mercato</p>
+                                <p class="font-bold text-accent-500 text-xl">45 Giorni</p>
+                            </div>
+                        </div>
+                        <div class="mb-6">
+                            <p class="text-gray-400 text-sm">Risultato</p>
+                            <p class="font-bold text-lg text-green-400">100% del prezzo richiesto</p>
+                        </div>
+                        <blockquote class="italic text-gray-300 text-sm border-l-4 border-accent-500 pl-4">
+                            "Professionalità assoluta. Si sono occupati di tutto, dal sistemare delle piccole irregolarità catastali fino a filtrare i curiosi. Mi sono sentita tutelata in ogni fase."
+                        </blockquote>
+                        <div class="mt-4 flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-full bg-brand-700 flex items-center justify-center text-sm font-bold">LB</div>
+                            <span class="text-sm font-medium">Laura Bianchi</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lead Generation Form Section -->
+    <section id="valuta-ora" class="py-24 bg-brand-50 relative">
+        <div class="absolute inset-0 bg-accent-500/5 h-1/2"></div>
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="bg-white rounded-3xl shadow-2xl overflow-hidden border border-gray-100">
+                <div class="grid md:grid-cols-5">
+                    <!-- Text Area -->
+                    <div class="md:col-span-2 bg-brand-900 text-white p-10 flex flex-col justify-center relative overflow-hidden">
+                        <div class="absolute -bottom-10 -right-10 opacity-10">
+                            <i data-lucide="home" class="w-64 h-64"></i>
+                        </div>
+                        <h2 class="font-serif text-3xl font-bold mb-4 relative z-10">Scopri quanto vale davvero la tua casa.</h2>
+                        <p class="text-gray-300 text-sm mb-8 relative z-10">Compila il modulo per ricevere un'analisi di mercato gratuita e un piano di vendita personalizzato in 24 ore.</p>
+                        
+                        <ul class="space-y-4 text-sm relative z-10">
+                            <li class="flex items-center gap-3">
+                                <i data-lucide="check-circle" class="text-accent-500 w-5 h-5"></i>
+                                <span>100% Gratuito</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i data-lucide="check-circle" class="text-accent-500 w-5 h-5"></i>
+                                <span>Senza alcun impegno</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i data-lucide="check-circle" class="text-accent-500 w-5 h-5"></i>
+                                <span>Privacy garantita</span>
+                            </li>
+                        </ul>
+
+                        <!-- API/Plugin Placeholder Immobiliare.it -->
+                        <div class="mt-8 relative z-10 bg-white/10 backdrop-blur-md p-5 rounded-xl border border-white/20">
+                            <div class="flex items-center gap-3 mb-2">
+                                <div class="w-8 h-8 bg-white rounded-lg flex items-center justify-center">
+                                    <i data-lucide="database" class="w-5 h-5 text-blue-600"></i>
+                                </div>
+                                <span class="font-bold text-white text-sm">Integrazione Immobiliare.it</span>
+                            </div>
+                            <p class="text-xs text-gray-300 mb-3">I nostri dati sono sincronizzati in tempo reale con le API di Immobiliare.it per fornirti la stima più accurata sul mercato locale.</p>
+                            <!-- Qui andrà il codice del plugin o dell'API JS fornito da Immobiliare.it -->
+                            <div id="immobiliare-api-container" class="w-full h-1 bg-white/20 rounded overflow-hidden">
+                                <div class="w-1/3 h-full bg-blue-500 animate-pulse"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Form Area -->
+                    <div class="md:col-span-3 p-10">
+                        <form id="leadForm" class="space-y-6">
+                            <!-- Success Message (Hidden by default) -->
+                            <div id="successMessage" class="hidden bg-green-50 text-green-800 p-4 rounded-lg border border-green-200 mb-6 flex items-start gap-3">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-green-600 mt-0.5"></i>
+                                <div>
+                                    <h4 class="font-bold">Richiesta inviata con successo!</h4>
+                                    <p class="text-sm">Un nostro consulente ti contatterà entro 24 ore per la tua valutazione gratuita.</p>
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                <div>
+                                    <label for="nome" class="block text-sm font-medium text-gray-700 mb-1">Nome e Cognome *</label>
+                                    <input type="text" id="nome" name="nome" required class="w-full px-4 py-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-accent-500 focus:border-accent-500 outline-none transition-shadow" placeholder="Mario Rossi">
+                                </div>
+                                <div>
+                                    <label for="telefono" class="block text-sm font-medium text-gray-700 mb-1">Telefono *</label>
+                                    <input type="tel" id="telefono" name="telefono" required class="w-full px-4 py-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-accent-500 focus:border-accent-500 outline-none transition-shadow" placeholder="+39 333 1234567">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email *</label>
+                                <input type="email" id="email" name="email" required class="w-full px-4 py-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-accent-500 focus:border-accent-500 outline-none transition-shadow" placeholder="mario.rossi@email.com">
+                            </div>
+
+                            <div>
+                                <label for="indirizzo" class="block text-sm font-medium text-gray-700 mb-1">Indirizzo dell'immobile da valutare *</label>
+                                <div class="relative">
+                                    <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                        <i data-lucide="map-pin" class="h-5 w-5 text-gray-400"></i>
+                                    </div>
+                                    <input type="text" id="indirizzo" name="indirizzo" required class="w-full pl-10 px-4 py-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-accent-500 focus:border-accent-500 outline-none transition-shadow" placeholder="Corso Vittorio Emanuele II, Pordenone">
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-2 mt-4">
+                                <input type="checkbox" id="privacy" name="privacy" required class="mt-1 text-accent-500 focus:ring-accent-500 border-gray-300 rounded cursor-pointer">
+                                <label for="privacy" class="text-xs text-gray-500 cursor-pointer">
+                                    Accetto il trattamento dei dati personali in base alla <a href="#" class="text-brand-900 underline">Privacy Policy</a> per la gestione di questa richiesta.
+                                </label>
+                            </div>
+
+                            <button type="submit" class="w-full flex justify-center items-center gap-2 py-4 px-4 border border-transparent rounded-md shadow-lg text-lg font-bold text-white bg-accent-500 hover:bg-accent-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent-500 transition-all duration-300 transform hover:-translate-y-1">
+                                Ottieni la Valutazione Ora
+                                <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                            </button>
+                            <p class="text-center text-xs text-gray-400 mt-3 flex items-center justify-center gap-1">
+                                <i data-lucide="lock" class="w-3 h-3"></i> Dati protetti da crittografia SSL
+                            </p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="font-serif text-3xl font-bold text-brand-900 mb-4">Domande Frequenti</h2>
+                <p class="text-gray-600">Hai ancora dubbi? Ecco le risposte alle domande più comuni dei proprietari di casa.</p>
+            </div>
+
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="faq-item bg-brand-50 rounded-lg border border-gray-100 overflow-hidden cursor-pointer" onclick="toggleFaq(this)">
+                    <div class="px-6 py-4 flex justify-between items-center">
+                        <h3 class="font-bold text-brand-900">Quanto costa la valutazione?</h3>
+                        <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-gray-500 transition-transform duration-300"></i>
+                    </div>
+                    <div class="faq-answer px-6 bg-white border-t border-gray-100">
+                        <p class="py-4 text-gray-600 text-sm leading-relaxed">La nostra valutazione professionale e l'analisi di mercato sono <strong>completamente gratuite e senza alcun vincolo</strong>. Il nostro obiettivo è mostrarti il nostro metodo di lavoro: sarai tu a decidere se affidarti a noi successivamente.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="faq-item bg-brand-50 rounded-lg border border-gray-100 overflow-hidden cursor-pointer" onclick="toggleFaq(this)">
+                    <div class="px-6 py-4 flex justify-between items-center">
+                        <h3 class="font-bold text-brand-900">Quanto tempo ci vuole per vendere?</h3>
+                        <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-gray-500 transition-transform duration-300"></i>
+                    </div>
+                    <div class="faq-answer px-6 bg-white border-t border-gray-100">
+                        <p class="py-4 text-gray-600 text-sm leading-relaxed">Il tempo medio di vendita dei nostri immobili è di <strong>45-60 giorni</strong> (contro una media nazionale di oltre 180 giorni). Questo risultato è garantito dal posizionamento corretto del prezzo e dal nostro marketing aggressivo fin dal primo giorno.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="faq-item bg-brand-50 rounded-lg border border-gray-100 overflow-hidden cursor-pointer" onclick="toggleFaq(this)">
+                    <div class="px-6 py-4 flex justify-between items-center">
+                        <h3 class="font-bold text-brand-900">Devo darvi l'esclusiva?</h3>
+                        <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-gray-500 transition-transform duration-300"></i>
+                    </div>
+                    <div class="faq-answer px-6 bg-white border-t border-gray-100">
+                        <p class="py-4 text-gray-600 text-sm leading-relaxed">Sì, lavoriamo esclusivamente in regime di incarico in esclusiva. Questo ci permette di investire ingenti capitali di marketing (foto, video drone, campagne sponsorizzate) solo sul tuo immobile e garantirne la vendita al miglior prezzo, senza conflitti di interesse con altre agenzie.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-900 text-gray-300 py-12 border-t border-brand-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <!-- Brand -->
+                <div class="col-span-1 md:col-span-2">
+                    <div class="inline-block bg-white p-2 rounded-lg mb-4">
+                        <svg viewBox="0 0 240 70" xmlns="http://www.w3.org/2000/svg" class="h-8 w-auto">
+                            <!-- F -->
+                            <text x="0" y="45" font-family="Arial, sans-serif" font-weight="900" font-size="50" fill="#0f172a">F</text>
+                            <!-- Manico Lente -->
+                            <line x1="46" y1="42" x2="30" y2="62" stroke="#0f172a" stroke-width="8" stroke-linecap="round"/>
+                            <!-- Lente -->
+                            <circle cx="65" cy="28" r="18" stroke="#0f172a" stroke-width="6" fill="white"/>
+                            <!-- Casa Rossa -->
+                            <path d="M 53 28 L 65 17 L 77 28 L 77 39 L 53 39 Z" fill="#ef4444"/>
+                            <!-- Finestre -->
+                            <rect x="56" y="23" width="4" height="5" fill="white"/>
+                            <rect x="70" y="23" width="4" height="5" fill="white"/>
+                            <!-- Porta -->
+                            <rect x="63" y="31" width="4" height="8" fill="white"/>
+                            <!-- CUS -->
+                            <text x="88" y="45" font-family="Arial, sans-serif" font-weight="900" font-size="50" fill="#0f172a" letter-spacing="-1">CUS</text>
+                            <!-- CASA -->
+                            <text x="92" y="65" font-family="Arial, sans-serif" font-weight="900" font-size="22" fill="#ef4444" letter-spacing="2">CASA</text>
+                        </svg>
+                    </div>
+                    <p class="text-sm text-gray-400 mb-6 max-w-sm">
+                        Agenzia immobiliare specializzata nella vendita rapida e al massimo valore di mercato di immobili residenziali.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-accent-500 transition-colors">
+                            <i data-lucide="facebook" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-accent-500 transition-colors">
+                            <i data-lucide="instagram" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-accent-500 transition-colors">
+                            <i data-lucide="linkedin" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Contacts -->
+                <div>
+                    <h4 class="text-white font-bold mb-4 uppercase text-sm tracking-wider">Contatti</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="map-pin" class="w-4 h-4 text-accent-500 shrink-0 mt-0.5"></i>
+                            <span>Corso Vittorio Emanuele II, 45<br>33170 Pordenone (PN)</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="phone" class="w-4 h-4 text-accent-500 shrink-0"></i>
+                            <span>+39 0434 123456</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="mail" class="w-4 h-4 text-accent-500 shrink-0"></i>
+                            <span>info@domuspremium.it</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Legal -->
+                <div>
+                    <h4 class="text-white font-bold mb-4 uppercase text-sm tracking-wider">Legale</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#" class="hover:text-white transition-colors">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Cookie Policy</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Termini e Condizioni</a></li>
+                        <li class="pt-2 text-xs text-gray-500">P.IVA: 12345678901<br>REA: MI-987654</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-brand-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
+                <p>&copy; 2025 DomusPremium Real Estate. Tutti i diritti riservati.</p>
+                <p class="mt-2 md:mt-0">Progettato per convertire. <i data-lucide="zap" class="w-3 h-3 inline text-accent-500"></i></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // FAQ Toggle Function
+        function toggleFaq(element) {
+            // Close all other FAQs
+            document.querySelectorAll('.faq-item').forEach(item => {
+                if(item !== element) {
+                    item.classList.remove('active');
+                }
+            });
+            // Toggle current FAQ
+            element.classList.toggle('active');
+        }
+
+        // Form Submission Handling
+        document.getElementById('leadForm').addEventListener('submit', function(e) {
+            e.preventDefault(); // Prevent actual form submission for demo
+            
+            // Get button to show loading state
+            const btn = this.querySelector('button[type="submit"]');
+            const originalText = btn.innerHTML;
+            
+            btn.innerHTML = '<svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-white inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg> Invio in corso...';
+            btn.disabled = true;
+
+            // Simulate API call
+            setTimeout(() => {
+                // Show success message
+                document.getElementById('successMessage').classList.remove('hidden');
+                
+                // Reset form and button
+                this.reset();
+                btn.innerHTML = originalText;
+                btn.disabled = false;
+                
+                // Optional: Hide success message after 5 seconds
+                setTimeout(() => {
+                    document.getElementById('successMessage').classList.add('hidden');
+                }, 5000);
+            }, 1500);
+        });
+
+        // Sticky Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 10) {
+                header.classList.add('shadow-md');
+                header.classList.remove('shadow-sm');
+            } else {
+                header.classList.remove('shadow-md');
+                header.classList.add('shadow-sm');
+            }
+        });
+    </script>
+</body>
+</html>
