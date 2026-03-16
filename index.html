@@ -95,27 +95,23 @@
     <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
         <div class="absolute inset-0 z-0">
             <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80" alt="Interno di casa accogliente" class="w-full h-full object-cover" />
-            <div class="absolute inset-0 bg-gradient-to-r from-brand-900/95 via-brand-900/80 to-transparent"></div>
+            <div class="absolute inset-0 bg-black/40"></div>
         </div>
         
         <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="max-w-2xl">
-                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent-500/20 border border-accent-500/30 text-accent-500 text-sm font-medium mb-6">
-                    <i data-lucide="check-circle-2" class="w-4 h-4"></i>
-                    <span>Metodo Certificato e Sicuro</span>
-                </div>
-                <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
-                    Metti a <span class="text-accent-500">fuoco</span> il vero valore del tuo immobile e vendilo al <span class="text-accent-500 underline decoration-accent-500/50 underline-offset-8">miglior prezzo</span>.
-                </h1>
-                <p class="text-lg sm:text-xl text-gray-300 mb-10 leading-relaxed font-light">
-                    Senza stress, senza infinite visite a vuoto e con la sicurezza di un team di esperti al tuo fianco. Scopri il reale valore del tuo immobile.
-                </p>
-                <div class="flex flex-col sm:flex-row gap-4">
-                    <a href="#valuta-ora" class="inline-flex items-center justify-center px-8 py-4 text-base font-bold rounded-md text-white bg-accent-500 hover:bg-accent-600 transition-all duration-300 shadow-lg shadow-accent-500/30 transform hover:-translate-y-1">
-                        Richiedi Valutazione Gratuita
-                        <i data-lucide="arrow-right" class="ml-2 w-5 h-5"></i>
-                    </a>
-                    <div class="flex items-center gap-4 text-white/80 text-sm mt-4 sm:mt-0 sm:ml-4">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="max-w-xl">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent-500/20 border border-accent-500/30 text-white text-sm font-medium mb-6 backdrop-blur-sm">
+                        <i data-lucide="check-circle-2" class="w-4 h-4 text-accent-500"></i>
+                        <span>Metodo Certificato e Sicuro</span>
+                    </div>
+                    <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
+                        Metti a <span class="text-accent-500">fuoco</span> il vero valore del tuo immobile e vendilo al <span class="text-accent-500 underline decoration-accent-500/50 underline-offset-8">miglior prezzo</span>.
+                    </h1>
+                    <p class="text-lg sm:text-xl text-gray-200 mb-10 leading-relaxed font-light text-shadow-sm">
+                        Senza stress, senza infinite visite a vuoto e con la sicurezza di un team di esperti al tuo fianco. Scopri il reale valore del tuo immobile.
+                    </p>
+                    <div class="flex items-center gap-4 text-white/90 text-sm mt-4">
                         <div class="flex -space-x-2">
                             <img class="w-10 h-10 rounded-full border-2 border-brand-900" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&auto=format&fit=facearea&facepad=2&w=100&h=100&q=80" alt="Cliente felice">
                             <img class="w-10 h-10 rounded-full border-2 border-brand-900" src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&auto=format&fit=facearea&facepad=2&w=100&h=100&q=80" alt="Cliente felice">
@@ -124,20 +120,48 @@
                         <p>Scelti da oltre <strong>500+</strong> famiglie<br>nel 2023.</p>
                     </div>
                 </div>
+                
+                <!-- Hero Form -->
+                <div class="bg-white p-8 rounded-2xl shadow-xl w-full max-w-md mx-auto lg:ml-auto">
+                    <h3 class="text-2xl font-bold text-brand-900 mb-6 flex items-center gap-2">
+                        <i data-lucide="calculator" class="w-6 h-6 text-accent-500"></i>
+                        Valuta la tua casa
+                    </h3>
+                    <form class="space-y-4">
+                        <div>
+                            <input type="text" placeholder="Nome e Cognome *" required class="w-full px-4 py-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-accent-500 focus:border-accent-500 outline-none text-brand-900">
+                        </div>
+                        <div>
+                            <input type="tel" placeholder="Telefono *" required class="w-full px-4 py-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-accent-500 focus:border-accent-500 outline-none text-brand-900">
+                        </div>
+                        <div>
+                            <input type="text" placeholder="Città / Zona *" required class="w-full px-4 py-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-accent-500 focus:border-accent-500 outline-none text-brand-900">
+                        </div>
+                        <button type="button" onclick="document.getElementById('valuta-ora').scrollIntoView();" class="w-full py-4 px-4 bg-accent-500 hover:bg-accent-600 text-white font-bold rounded-md shadow-lg transition-transform hover:-translate-y-1 mt-4 flex justify-center items-center gap-2">
+                            Continua Valutazione
+                            <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                        </button>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Social Proof / Trust Bar -->
-    <section class="bg-white py-10 border-b border-gray-100">
+    <!-- About Us / Chi Siamo -->
+    <section class="py-20 bg-white border-b border-gray-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <p class="text-center text-sm font-semibold text-gray-400 uppercase tracking-wider mb-6">Riconosciuti e associati con i migliori del settore</p>
-            <div class="flex flex-wrap justify-center items-center gap-10 md:gap-20 opacity-60 grayscale">
-                <!-- Placeholder for logos using text/icons for demo purposes -->
-                <div class="flex items-center gap-2 font-serif text-xl font-bold"><i data-lucide="award" class="w-6 h-6"></i> FIMAA</div>
-                <div class="flex items-center gap-2 font-serif text-xl font-bold"><i data-lucide="shield-check" class="w-6 h-6"></i> FIAIP</div>
-                <div class="flex items-center gap-2 font-serif text-xl font-bold text-blue-600"><i data-lucide="home" class="w-6 h-6"></i> Immobiliare.it</div>
-                <div class="flex items-center gap-2 font-serif text-xl font-bold"><i data-lucide="newspaper" class="w-6 h-6"></i> Il Gazzettino</div>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <img src="https://images.unsplash.com/photo-1560518883-ce09059eeefa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Il nostro team" class="rounded-2xl shadow-lg w-full h-full object-cover">
+                </div>
+                <div>
+                    <h2 class="font-serif text-3xl md:text-4xl font-bold text-brand-900 mb-6">Chi Siamo</h2>
+                    <p class="text-lg text-gray-600 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <p class="text-lg text-gray-600 mb-6">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <a href="#valuta-ora" class="font-bold text-accent-500 hover:text-accent-600 flex items-center gap-2">
+                        Scopri il nostro metodo <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
             </div>
         </div>
     </section>
@@ -339,6 +363,177 @@
         </div>
     </section>
 
+    <!-- Slider Immobili (Idealista) -->
+    <section class="py-20 bg-brand-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-10">
+                <h2 class="font-serif text-3xl md:text-4xl font-bold text-brand-900 mb-4">I Nostri Immobili in Evidenza</h2>
+                <p class="text-lg text-gray-600">Aggiornati automaticamente dal nostro profilo 
+                    <a href="https://www.idealista.it/pro/focus-casa-di-barbara-zanet/" target="_blank" class="text-accent-500 font-bold hover:underline">Idealista</a>.
+                </p>
+            </div>
+
+            <!-- Loading State -->
+            <div id="idealista-loading" class="flex flex-col items-center justify-center py-16 gap-4">
+                <div class="w-12 h-12 border-4 border-accent-500 border-t-transparent rounded-full animate-spin"></div>
+                <p class="text-gray-500 text-sm">Caricamento annunci da Idealista...</p>
+            </div>
+
+            <!-- Slider Container -->
+            <div id="idealista-slider" class="hidden relative">
+                <div id="idealista-track" class="flex gap-6 overflow-x-auto snap-x snap-mandatory pb-4 scroll-smooth" style="scrollbar-width:none;-ms-overflow-style:none;"></div>
+                <!-- Navigation Arrows -->
+                <button onclick="slideIdealista(-1)" class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-white border border-gray-200 shadow-lg rounded-full w-10 h-10 flex items-center justify-center hover:bg-accent-500 hover:text-white hover:border-accent-500 transition-colors z-10">
+                    <i data-lucide="chevron-left" class="w-5 h-5"></i>
+                </button>
+                <button onclick="slideIdealista(1)" class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-white border border-gray-200 shadow-lg rounded-full w-10 h-10 flex items-center justify-center hover:bg-accent-500 hover:text-white hover:border-accent-500 transition-colors z-10">
+                    <i data-lucide="chevron-right" class="w-5 h-5"></i>
+                </button>
+                <!-- Dots -->
+                <div id="idealista-dots" class="flex justify-center gap-2 mt-6"></div>
+            </div>
+
+            <!-- Fallback (shown only if fetch fails) -->
+            <div id="idealista-fallback" class="hidden bg-white rounded-2xl shadow-lg p-10 text-center border border-gray-100">
+                <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-accent-500/10 mb-6">
+                    <i data-lucide="home" class="w-8 h-8 text-accent-500"></i>
+                </div>
+                <h3 class="font-serif text-2xl font-bold text-brand-900 mb-3">Scopri tutti i nostri annunci</h3>
+                <p class="text-gray-600 mb-6 max-w-md mx-auto">Sfoglia il nostro portfolio completo di immobili in vendita sul nostro profilo ufficiale Idealista.</p>
+                <a href="https://www.idealista.it/pro/focus-casa-di-barbara-zanet/" target="_blank"
+                   class="inline-flex items-center gap-2 bg-accent-500 text-white font-bold px-8 py-4 rounded-full hover:bg-accent-600 transition-colors shadow-lg">
+                    Vedi tutti gli immobili su Idealista <i data-lucide="external-link" class="w-4 h-4"></i>
+                </a>
+            </div>
+
+            <!-- "Vedi tutti" button -->
+            <div id="idealista-cta" class="hidden text-center mt-8">
+                <a href="https://www.idealista.it/pro/focus-casa-di-barbara-zanet/" target="_blank"
+                   class="inline-flex items-center gap-2 text-brand-900 border-2 border-brand-900 font-bold px-8 py-3 rounded-full hover:bg-brand-900 hover:text-white transition-colors">
+                    Vedi tutti gli annunci su Idealista <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        #idealista-track::-webkit-scrollbar { display: none; }
+        .idealista-card { min-width: 300px; flex: 0 0 300px; }
+        @media (min-width: 768px) { .idealista-card { min-width: 340px; flex: 0 0 340px; } }
+    </style>
+
+    <script>
+    (function() {
+        const PROFILE_URL = 'https://www.idealista.it/pro/focus-casa-di-barbara-zanet/';
+        const PROXY = 'https://api.allorigins.win/raw?url=';
+
+        async function fetchIdealista() {
+            try {
+                const res = await fetch(PROXY + encodeURIComponent(PROFILE_URL), { signal: AbortSignal.timeout(10000) });
+                if (!res.ok) throw new Error('Network error');
+                const html = await res.text();
+                const parser = new DOMParser();
+                const doc = parser.parseFromString(html, 'text/html');
+
+                // Parse Idealista article cards
+                const items = [];
+                doc.querySelectorAll('article.item, .ad-listing article, .items-container article').forEach(article => {
+                    const titleEl = article.querySelector('a.item-link, a[title], h2 a, h3 a');
+                    const priceEl = article.querySelector('.item-price, .price-row, [class*="price"]');
+                    const imgEl = article.querySelector('img[src], img[data-src]');
+                    const infoEl = article.querySelector('.item-detail, .item-info, [class*="detail"]');
+                    if (titleEl) {
+                        const href = titleEl.getAttribute('href') || '';
+                        items.push({
+                            title: titleEl.getAttribute('title') || titleEl.textContent.trim(),
+                            price: priceEl ? priceEl.textContent.trim() : '',
+                            img: imgEl ? (imgEl.getAttribute('src') || imgEl.getAttribute('data-src') || '') : '',
+                            detail: infoEl ? infoEl.textContent.trim() : '',
+                            url: href.startsWith('http') ? href : 'https://www.idealista.it' + href
+                        });
+                    }
+                });
+
+                if (items.length === 0) throw new Error('No items found');
+                renderSlider(items);
+            } catch(e) {
+                console.warn('Idealista fetch failed:', e);
+                document.getElementById('idealista-loading').classList.add('hidden');
+                document.getElementById('idealista-fallback').classList.remove('hidden');
+            }
+        }
+
+        function renderSlider(items) {
+            const track = document.getElementById('idealista-track');
+            const dotsContainer = document.getElementById('idealista-dots');
+            track.innerHTML = '';
+            dotsContainer.innerHTML = '';
+
+            items.forEach((item, i) => {
+                const card = document.createElement('a');
+                card.href = item.url;
+                card.target = '_blank';
+                card.rel = 'noopener';
+                card.className = 'idealista-card snap-start bg-white rounded-2xl shadow-md overflow-hidden border border-gray-100 hover:shadow-xl transition-shadow duration-300 group flex flex-col no-underline';
+                card.innerHTML = `
+                    <div class="relative h-48 overflow-hidden bg-gray-100">
+                        ${item.img ? `<img src="${item.img}" alt="${item.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.parentNode.innerHTML='<div class=\\'w-full h-full flex items-center justify-center bg-brand-50\\'><svg xmlns=\\'http://www.w3.org/2000/svg\\' width=\\'48\\' height=\\'48\\' viewBox=\\'0 0 24 24\\' fill=\\'none\\' stroke=\\'#94a3b8\\' stroke-width=\\'1.5\\'><path d=\\'M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z\\'/></svg></div>'" />` : '<div class=\'w-full h-full flex items-center justify-center bg-brand-50\'><svg xmlns=\'http://www.w3.org/2000/svg\' width=\'48\' height=\'48\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'#94a3b8\' stroke-width=\'1.5\'><path d=\'M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z\'/></svg></div>'}
+                        <div class="absolute top-3 left-3"><span class="bg-accent-500 text-white text-xs font-bold px-2 py-1 rounded-full">In Vendita</span></div>
+                    </div>
+                    <div class="p-5 flex flex-col gap-2 flex-1">
+                        <p class="font-bold text-accent-500 text-xl">${item.price || '—'}</p>
+                        <h3 class="font-semibold text-brand-900 text-sm leading-snug line-clamp-2">${item.title}</h3>
+                        ${item.detail ? `<p class="text-gray-500 text-xs mt-auto line-clamp-2">${item.detail}</p>` : ''}
+                    </div>
+                `;
+                track.appendChild(card);
+
+                const dot = document.createElement('button');
+                dot.className = 'w-2.5 h-2.5 rounded-full bg-gray-300 transition-colors duration-200';
+                dot.setAttribute('aria-label', `Immobile ${i+1}`);
+                dot.onclick = () => scrollToSlide(i);
+                dotsContainer.appendChild(dot);
+            });
+
+            document.getElementById('idealista-loading').classList.add('hidden');
+            document.getElementById('idealista-slider').classList.remove('hidden');
+            document.getElementById('idealista-cta').classList.remove('hidden');
+            lucide.createIcons();
+            updateDots();
+
+            // Auto-scroll every 4 seconds
+            let current = 0;
+            setInterval(() => {
+                current = (current + 1) % items.length;
+                scrollToSlide(current);
+            }, 4000);
+        }
+
+        function scrollToSlide(i) {
+            const track = document.getElementById('idealista-track');
+            const card = track.children[i];
+            if (card) { card.scrollIntoView({ behavior: 'smooth', inline: 'start', block: 'nearest' }); }
+            updateDots(i);
+        }
+
+        function updateDots(active) {
+            const dots = document.querySelectorAll('#idealista-dots button');
+            dots.forEach((d, i) => {
+                d.classList.toggle('bg-accent-500', i === active);
+                d.classList.toggle('bg-gray-300', i !== active);
+            });
+        }
+
+        window.slideIdealista = function(dir) {
+            const track = document.getElementById('idealista-track');
+            const cardWidth = track.firstChild ? track.firstChild.offsetWidth + 24 : 324;
+            track.scrollBy({ left: dir * cardWidth, behavior: 'smooth' });
+        };
+
+        fetchIdealista();
+    })();
+    </script>
+
     <!-- Lead Generation Form Section -->
     <section id="valuta-ora" class="py-24 bg-brand-50 relative">
         <div class="absolute inset-0 bg-accent-500/5 h-1/2"></div>
@@ -412,13 +607,42 @@
                                 <input type="email" id="email" name="email" required class="w-full px-4 py-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-accent-500 focus:border-accent-500 outline-none transition-shadow" placeholder="mario.rossi@email.com">
                             </div>
 
+                            <!-- Dettagli Immobile -->
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">Città / Zona *</label>
+                                    <input type="text" id="zona" name="zona" required class="w-full px-4 py-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-accent-500 focus:border-accent-500 outline-none transition-shadow" placeholder="Es. Pordenone Centro">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">Metri Quadri *</label>
+                                    <input type="number" id="mq" name="mq" required class="w-full px-4 py-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-accent-500 focus:border-accent-500 outline-none transition-shadow" placeholder="Es. 120">
+                                </div>
+                            </div>
+                            
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">Anno di Costruzione</label>
+                                    <input type="number" id="anno" name="anno" class="w-full px-4 py-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-accent-500 focus:border-accent-500 outline-none transition-shadow" placeholder="Es. 1995">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">Tipologia *</label>
+                                    <select id="tipologia" name="tipologia" required class="w-full px-4 py-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-accent-500 focus:border-accent-500 outline-none transition-shadow bg-white">
+                                        <option value="">Seleziona...</option>
+                                        <option value="appartamento">Appartamento</option>
+                                        <option value="casa_singola">Casa Singola</option>
+                                        <option value="villa">Villa / Villetta</option>
+                                        <option value="attico">Attico</option>
+                                    </select>
+                                </div>
+                            </div>
+
                             <div>
-                                <label for="indirizzo" class="block text-sm font-medium text-gray-700 mb-1">Indirizzo dell'immobile da valutare *</label>
+                                <label for="indirizzo" class="block text-sm font-medium text-gray-700 mb-1">Indirizzo esatto dell'immobile (Opzionale)</label>
                                 <div class="relative">
                                     <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                                         <i data-lucide="map-pin" class="h-5 w-5 text-gray-400"></i>
                                     </div>
-                                    <input type="text" id="indirizzo" name="indirizzo" required class="w-full pl-10 px-4 py-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-accent-500 focus:border-accent-500 outline-none transition-shadow" placeholder="Corso Vittorio Emanuele II, Pordenone">
+                                    <input type="text" id="indirizzo" name="indirizzo" class="w-full pl-10 px-4 py-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-accent-500 focus:border-accent-500 outline-none transition-shadow" placeholder="Corso Vittorio Emanuele II, 45">
                                 </div>
                             </div>
 
