@@ -1,0 +1,16 @@
+# robots.txt – Focus Casa Agenzia Immobiliare Pordenone
+# https://www.focuscasa.it
+
+User-agent: *
+Allow: /
+
+# Disallow any admin or private areas (add as needed)
+Disallow: /admin/
+Disallow: /wp-admin/
+
+# Allow Google Image Bot
+User-agent: Googlebot-Image
+Allow: /
+
+# Sitemap location
+Sitemap: https://www.focuscasa.it/sitemap.xml
