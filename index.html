@@ -144,10 +144,19 @@
             <div class="flex items-center gap-2 cursor-pointer">
                 <img src="logo.png" alt="Focus Casa – Agenzia Immobiliare Pordenone" class="h-24 w-auto">
             </div>
+
+            <!-- Desktop Menu -->
+            <nav class="hidden md:flex flex-1 justify-center space-x-8">
+                <a href="#chi-siamo" class="text-brand-900 font-semibold hover:text-accent-500 transition-colors">Chi Siamo</a>
+                <a href="#immobili" class="text-brand-900 font-semibold hover:text-accent-500 transition-colors">Immobili</a>
+                <a href="#recensioni" class="text-brand-900 font-semibold hover:text-accent-500 transition-colors">Recensioni</a>
+                <a href="#faq" class="text-brand-900 font-semibold hover:text-accent-500 transition-colors">FAQ</a>
+            </nav>
+
             <a href="#valuta-ora" class="hidden sm:flex inline-flex items-center justify-center px-6 py-2.5 border border-transparent text-sm font-semibold rounded-md text-white bg-brand-900 hover:bg-brand-800 transition-all duration-200 shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
-                Valuta Ora la tua Casa
+                Valuta Ora
             </a>
-            <!-- Mobile Menu Button (simplified for landing page) -->
+            <!-- Mobile Menu Button -->
             <a href="#valuta-ora" class="sm:hidden text-accent-500 font-semibold">Valuta Ora</a>
         </div>
     </header>
@@ -218,11 +227,11 @@
     </section>
 
     <!-- About Us / Chi Siamo -->
-    <section class="py-20 bg-white border-b border-gray-100">
+    <section id="chi-siamo" class="py-20 bg-white border-b border-gray-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div>
-                    <img src="https://images.unsplash.com/photo-1560518883-ce09059eeefa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Il nostro team" class="rounded-2xl shadow-lg w-full h-full object-cover">
+                    <img src="chi_siamo_donne.png" alt="Il nostro team" class="rounded-2xl shadow-lg w-full h-full object-cover">
                 </div>
                 <div>
                     <h2 class="font-serif text-3xl md:text-4xl font-bold text-brand-900 mb-6">Chi Siamo</h2>
@@ -376,11 +385,17 @@
 
 
         <!-- Slider Immobili (Idealista) -->
-    <section class="py-20 bg-brand-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="immobili" class="py-20 relative text-white">
+        <!-- Background Image -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1920&q=80" alt="Esterno casa" class="w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-brand-900/80"></div>
+        </div>
+        
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-10">
-                <h2 class="font-serif text-3xl md:text-4xl font-bold text-brand-900 mb-4">Immobili in Vendita a Pordenone e Provincia</h2>
-                <p class="text-lg text-gray-600">Sfoglia il nostro portfolio aggiornato di immobili in vendita nel pordenonese, direttamente dal nostro profilo
+                <h2 class="font-serif text-3xl md:text-4xl font-bold text-white mb-4">Immobili in Vendita a Pordenone e Provincia</h2>
+                <p class="text-lg text-gray-200">Sfoglia il nostro portfolio aggiornato di immobili in vendita nel pordenonese, direttamente dal nostro profilo
                     <a href="https://www.idealista.it/pro/focus-casa-di-barbara-zanet/" target="_blank" class="text-accent-500 font-bold hover:underline">Idealista</a>.
                 </p>
             </div>
@@ -421,7 +436,7 @@
             <!-- "Vedi tutti" button -->
             <div id="idealista-cta" class="hidden text-center mt-8">
                 <a href="https://www.idealista.it/pro/focus-casa-di-barbara-zanet/" target="_blank"
-                   class="inline-flex items-center gap-2 text-brand-900 border-2 border-brand-900 font-bold px-8 py-3 rounded-full hover:bg-brand-900 hover:text-white transition-colors">
+                   class="inline-flex items-center gap-2 text-white border-2 border-white font-bold px-8 py-3 rounded-full hover:bg-white hover:text-brand-900 transition-colors shadow-lg">
                     Vedi tutti gli annunci su Idealista <i data-lucide="arrow-right" class="w-4 h-4"></i>
                 </a>
             </div>
@@ -610,8 +625,10 @@
     </script>
 
     <!-- Lead Generation Form Section -->
-    <section id="valuta-ora" class="py-24 bg-brand-50 relative">
-        <div class="absolute inset-0 bg-accent-500/5 h-1/2"></div>
+    <section id="valuta-ora" class="py-24 relative overflow-hidden" style="background-color: #f8fafc; background-image: radial-gradient(#cbd5e1 1.5px, transparent 1.5px); background-size: 24px 24px;">
+        <!-- Sfondo unificato col rosso sfumato -->
+        <div class="absolute inset-0 bg-gradient-to-b from-accent-500/15 via-accent-500/5 to-transparent z-0"></div>
+        
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="bg-white rounded-3xl shadow-2xl overflow-hidden border border-gray-100">
                 <div class="grid md:grid-cols-5">
@@ -730,7 +747,7 @@
     </section>
 
     <!-- FAQ Section -->
-    <section class="py-20 bg-white">
+    <section id="faq" class="py-20 relative overflow-hidden" style="background-color: #ffffff; background-image: radial-gradient(#e2e8f0 1.5px, transparent 1.5px); background-size: 24px 24px;">
         <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
                 <h2 class="font-serif text-3xl font-bold text-brand-900 mb-4">Domande Frequenti</h2>
@@ -776,34 +793,8 @@
 
 
     <!-- Google My Business Reviews Section -->
-    <section class="py-20 bg-white border-b border-gray-100">
+    <section id="recensioni" class="py-20 bg-white border-b border-gray-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <!-- 
-                ============================================================
-                RECENSIONI GOOGLE – AGGIORNAMENTO AUTOMATICO
-                ============================================================
-                OPZIONE 1 (CONSIGLIATA – GRATIS): Elfsight Google Reviews Widget
-                1. Vai su https://elfsight.com/google-reviews-widget/
-                2. Collega il tuo profilo Google My Business
-                3. Copia il codice script che ti forniscono
-                4. Sostituisci il blocco "elfsight-app-XXXXXXXX" qui sotto con il tuo ID widget
-                
-                OPZIONE 2: EmbedSocial, Trustindex o altri widget similari
-                
-                OPZIONE 3 (WordPress): installa il plugin
-                "Widget for Google Reviews" (gratuito, 200k+ installazioni)
-                da https://wordpress.org/plugins/widget-google-reviews/
-                ============================================================
-            -->
-
-            <!-- Elfsight Widget Placeholder – sostituisci XXXXXXXX con il tuo App ID -->
-            <div id="elfsight-reviews-container" class="mb-8">
-                <!-- Se hai già il codice Elfsight, incollalo qui:
-                <script src="https://static.elfsight.com/platform/platform.js" async></script>
-                <div class="elfsight-app-XXXXXXXX" data-elfsight-app-lazy></div>
-                -->
-            </div>
-
             <div class="text-center mb-12">
                 <div class="inline-flex items-center gap-2 mb-4">
                     <svg viewBox="0 0 24 24" class="w-8 h-8" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -814,7 +805,7 @@
                     </svg>
                     <span class="font-bold text-xl text-brand-900">Google Reviews</span>
                 </div>
-                <h2 class="font-serif text-3xl md:text-4xl font-bold text-brand-900 mb-3">Cosa dicono i nostri clienti</h2>
+                <h2 class="font-serif text-3xl md:text-4xl font-bold text-brand-900 mb-3">Cosa dicono di noi</h2>
                 <div class="flex items-center justify-center gap-2 mb-4">
                     <div class="flex text-yellow-400">
                         <svg class="w-6 h-6 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
@@ -823,87 +814,59 @@
                         <svg class="w-6 h-6 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
                         <svg class="w-6 h-6 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
                     </div>
-                    <span class="font-bold text-2xl text-brand-900">4.9</span>
-                    <span class="text-gray-500 text-sm">· 87 recensioni su Google</span>
+                    <span class="font-bold text-2xl text-brand-900">5.0</span>
+                    <span class="text-gray-500 text-sm">· Eccellente</span>
                 </div>
-                <a href="https://share.google/bxoxiyKEu23hEt0hT" target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-sm font-medium text-accent-500 hover:text-accent-600 underline underline-offset-2">
-                    Visualizza su Google Maps
+                <a href="https://share.google/uRRW5nYT2PhFHNDxm" target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-sm font-medium text-accent-500 hover:text-accent-600 underline underline-offset-2">
+                    Visualizza le nostre recensioni su Google Maps
                     <i data-lucide="external-link" class="w-4 h-4"></i>
                 </a>
             </div>
 
             <!-- Reviews Slider -->
-            <div class="relative">
-                <div id="reviews-track" class="flex gap-6 overflow-hidden">
-                    <!-- Review cards – update with your real reviews from Google -->
-                    <div class="review-card min-w-full sm:min-w-[calc(50%-12px)] lg:min-w-[calc(33.333%-16px)] bg-brand-50 rounded-2xl p-6 border border-gray-100 shadow-sm flex flex-col gap-4">
-                        <div class="flex text-yellow-400 text-sm">★★★★★</div>
-                        <p class="text-gray-700 text-sm leading-relaxed italic">"Ho venduto il mio trilocale in centro a Pordenone in soli 32 giorni, a un prezzo superiore alle mie aspettative. Barbara e il suo team sono stati presenti in ogni fase. Professionali e umani."</p>
-                        <div class="flex items-center gap-3 mt-auto">
-                            <div class="w-10 h-10 rounded-full bg-accent-500 flex items-center justify-center text-white font-bold text-sm">MR</div>
-                            <div>
-                                <p class="font-semibold text-brand-900 text-sm">Marco R.</p>
-                                <p class="text-gray-400 text-xs">Pordenone · 3 mesi fa</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="review-card min-w-full sm:min-w-[calc(50%-12px)] lg:min-w-[calc(33.333%-16px)] bg-brand-50 rounded-2xl p-6 border border-gray-100 shadow-sm flex flex-col gap-4">
-                        <div class="flex text-yellow-400 text-sm">★★★★★</div>
-                        <p class="text-gray-700 text-sm leading-relaxed italic">"Eravamo bloccati da più di sei mesi con un'altra agenzia. Focus Casa ha preso in mano la situazione, ha rifatto tutto il marketing e ha trovato l'acquirente giusto in poche settimane. Consigliatissimi!"</p>
-                        <div class="flex items-center gap-3 mt-auto">
-                            <div class="w-10 h-10 rounded-full bg-blue-500 flex items-center justify-center text-white font-bold text-sm">LB</div>
-                            <div>
-                                <p class="font-semibold text-brand-900 text-sm">Laura B.</p>
-                                <p class="text-gray-400 text-xs">Cordenons · 5 mesi fa</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="review-card min-w-full sm:min-w-[calc(50%-12px)] lg:min-w-[calc(33.333%-16px)] bg-brand-50 rounded-2xl p-6 border border-gray-100 shadow-sm flex flex-col gap-4">
-                        <div class="flex text-yellow-400 text-sm">★★★★★</div>
-                        <p class="text-gray-700 text-sm leading-relaxed italic">"Valutazione precisa e onesta, senza gonfiare il prezzo per prendere l'incarico. Alla fine abbiamo venduto esattamente alla cifra indicata, in tempi rapidissimi. Massima trasparenza."</p>
-                        <div class="flex items-center gap-3 mt-auto">
-                            <div class="w-10 h-10 rounded-full bg-green-500 flex items-center justify-center text-white font-bold text-sm">GF</div>
-                            <div>
-                                <p class="font-semibold text-brand-900 text-sm">Gianni F.</p>
-                                <p class="text-gray-400 text-xs">Sacile · 2 mesi fa</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="review-card min-w-full sm:min-w-[calc(50%-12px)] lg:min-w-[calc(33.333%-16px)] bg-brand-50 rounded-2xl p-6 border border-gray-100 shadow-sm flex flex-col gap-4">
-                        <div class="flex text-yellow-400 text-sm">★★★★★</div>
-                        <p class="text-gray-700 text-sm leading-relaxed italic">"Le foto e il video professionale hanno fatto la differenza: la mia villetta sembrava completamente diversa. Tre offerte in due settimane. Non mi aspettavo un risultato così veloce."</p>
-                        <div class="flex items-center gap-3 mt-auto">
-                            <div class="w-10 h-10 rounded-full bg-purple-500 flex items-center justify-center text-white font-bold text-sm">AM</div>
-                            <div>
-                                <p class="font-semibold text-brand-900 text-sm">Anna M.</p>
-                                <p class="text-gray-400 text-xs">Porcia · 1 mese fa</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="review-card min-w-full sm:min-w-[calc(50%-12px)] lg:min-w-[calc(33.333%-16px)] bg-brand-50 rounded-2xl p-6 border border-gray-100 shadow-sm flex flex-col gap-4">
-                        <div class="flex text-yellow-400 text-sm">★★★★★</div>
-                        <p class="text-gray-700 text-sm leading-relaxed italic">"Gestione impeccabile di tutta la burocrazia: dal compromesso al rogito non ho dovuto preoccuparmi di nulla. Focus Casa risolve tutto, con gentilezza e competenza."</p>
-                        <div class="flex items-center gap-3 mt-auto">
-                            <div class="w-10 h-10 rounded-full bg-orange-500 flex items-center justify-center text-white font-bold text-sm">FD</div>
-                            <div>
-                                <p class="font-semibold text-brand-900 text-sm">Filippo D.</p>
-                                <p class="text-gray-400 text-xs">Azzano Decimo · 4 mesi fa</p>
-                            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                
+                <!-- Review 1 -->
+                <div class="review-card bg-brand-50 rounded-2xl p-6 border border-gray-100 shadow-sm flex flex-col gap-4 hover:shadow-md transition-shadow">
+                    <div class="flex text-yellow-400 text-sm">★★★★★</div>
+                    <p class="text-gray-700 text-sm leading-relaxed italic">"Ho venduto il mio appartamento a Fiume Veneto in meno di due mesi grazie al team di Focus Casa. Massima professionalità, foto stupende dell'immobile e assistenza continua in ogni fase. Consigliatissimi!"</p>
+                    <div class="flex items-center gap-3 mt-auto">
+                        <div class="w-10 h-10 rounded-full bg-blue-500 flex items-center justify-center text-white font-bold text-sm">LM</div>
+                        <div>
+                            <p class="font-semibold text-brand-900 text-sm">Laura M.</p>
+                            <p class="text-gray-400 text-xs">Pordenone</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- Navigation -->
-                <div class="flex items-center justify-center gap-4 mt-8">
-                    <button onclick="slideReviews(-1)" class="w-10 h-10 bg-white border border-gray-200 shadow rounded-full flex items-center justify-center hover:bg-accent-500 hover:text-white hover:border-accent-500 transition-colors">
-                        <i data-lucide="chevron-left" class="w-5 h-5"></i>
-                    </button>
-                    <div id="reviews-dots" class="flex gap-2"></div>
-                    <button onclick="slideReviews(1)" class="w-10 h-10 bg-white border border-gray-200 shadow rounded-full flex items-center justify-center hover:bg-accent-500 hover:text-white hover:border-accent-500 transition-colors">
-                        <i data-lucide="chevron-right" class="w-5 h-5"></i>
-                    </button>
+                <!-- Review 2 -->
+                <div class="review-card bg-brand-50 rounded-2xl p-6 border border-gray-100 shadow-sm flex flex-col gap-4 hover:shadow-md transition-shadow">
+                    <div class="flex text-yellow-400 text-sm">★★★★★</div>
+                    <p class="text-gray-700 text-sm leading-relaxed italic">"Agenzia seria e molto competente. Hanno valutato correttamente la mia casa a Pordenone senza false promesse, e sono riusciti a trovare un acquirente in pochissimo tempo. Un grazie particolare per la disponibilità."</p>
+                    <div class="flex items-center gap-3 mt-auto">
+                        <div class="w-10 h-10 rounded-full bg-green-500 flex items-center justify-center text-white font-bold text-sm">AT</div>
+                        <div>
+                            <p class="font-semibold text-brand-900 text-sm">Andrea T.</p>
+                            <p class="text-gray-400 text-xs">Pordenone</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="review-card bg-brand-50 rounded-2xl p-6 border border-gray-100 shadow-sm flex flex-col gap-4 hover:shadow-md transition-shadow">
+                    <div class="flex text-yellow-400 text-sm">★★★★★</div>
+                    <p class="text-gray-700 text-sm leading-relaxed italic">"Ci siamo affidati a loro per l'acquisto della nostra prima casa. Trasparenti, precisi e ci hanno seguito fino al giorno del rogito e anche oltre per delle pratiche. Servizio impeccabile."</p>
+                    <div class="flex items-center gap-3 mt-auto">
+                        <div class="w-10 h-10 rounded-full bg-purple-500 flex items-center justify-center text-white font-bold text-sm">GS</div>
+                        <div>
+                            <p class="font-semibold text-brand-900 text-sm">Giulia S.</p>
+                            <p class="text-gray-400 text-xs">Fiume Veneto</p>
+                        </div>
+                    </div>
                 </div>
             </div>
+
+
 
             <!-- CTA to leave a review -->
             <div class="text-center mt-10">
@@ -916,55 +879,6 @@
         </div>
     </section>
 
-    <style>
-        #reviews-track { transition: transform 0.4s ease; }
-        .review-card { flex-shrink: 0; }
-    </style>
-
-    <script>
-    (function(){
-        const track = document.getElementById('reviews-track');
-        const dotsContainer = document.getElementById('reviews-dots');
-        const cards = document.querySelectorAll('.review-card');
-        let current = 0;
-        const total = cards.length;
-
-        // Determine visible cards based on viewport
-        function getVisible() {
-            if (window.innerWidth >= 1024) return 3;
-            if (window.innerWidth >= 640) return 2;
-            return 1;
-        }
-
-        // Build dots
-        const maxSlides = total;
-        for (let i = 0; i < maxSlides; i++) {
-            const d = document.createElement('button');
-            d.className = 'w-2.5 h-2.5 rounded-full bg-gray-300 transition-colors';
-            d.onclick = () => goTo(i);
-            dotsContainer.appendChild(d);
-        }
-
-        function goTo(n) {
-            current = (n + total) % total;
-            const vis = getVisible();
-            const pct = (100 / vis);
-            track.style.transform = `translateX(-${current * pct}%)`;
-            dotsContainer.querySelectorAll('button').forEach((d, i) => {
-                d.className = i === current ? 'w-2.5 h-2.5 rounded-full bg-accent-500 transition-colors' : 'w-2.5 h-2.5 rounded-full bg-gray-300 transition-colors';
-            });
-        }
-
-        window.slideReviews = function(dir) { goTo(current + dir); };
-
-        // Auto-advance every 5s
-        setInterval(() => goTo(current + 1), 5000);
-        goTo(0);
-
-        // Recalc on resize
-        window.addEventListener('resize', () => goTo(current));
-    })();
-    </script>
 
     <!-- Footer -->
     <footer class="bg-brand-900 text-gray-300 py-12 border-t border-brand-800">
